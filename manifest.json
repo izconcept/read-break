@@ -13,6 +13,9 @@
     "activeTab",
     "storage"
   ],
+  "background": {
+    "page": "background.html"
+  },
   "content_scripts": [ {
     "matches": ["http://*/*", "https://*/*"],
     "js": ["jquery.js"]

@@ -1,3 +1,1 @@
-$(document).ready(function() {
-  console.log('test')
-})
+chrome.extension.getBackgroundPage().console.log('foo');
