@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Read-Time",
-  "description": "Estimes the read time of web articles",
+  "description": "Estimates the read time of web articles",
   "version": "0.0",
 
   "browser_action": {
@@ -17,7 +17,7 @@
     "page": "background.html"
   },
   "content_scripts": [ {
-    "matches": ["http://*/*", "https://*/*"],
-    "js": ["jquery.js"]
+    "matches": ["<all_urls>"],
+    "js": ["jquery.js", "background.js"]
   } ]
 }
