@@ -18,6 +18,7 @@
   },
   "content_scripts": [ {
     "matches": ["https://www.newyorker.com/*", "https://www.theatlantic.com/*", "https://www.economist.com/*", "https://www.washingtonpost.com/*"],
-    "js": ["jquery.js", "background.js"]
+    "js": ["jquery.js", "background.js"],
+    "css": ["style.css"]
   } ]
 }
