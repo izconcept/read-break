@@ -1,33 +1,40 @@
 // Inject javascript code into page here
 
-if($('article')) {
-	article = $('article');
+$(document).ready(function() {
 
-	articleText = article.text();
+	setTimeout(function() {
+		if($('article')) {
+			article = $('article');
 
-	var host = window.location.hostname;
+			articleText = article.text();
 
-	var WPM = 200;
+			var host = window.location.hostname;
 
-	var words = articleText.split(' ').length;
+			var WPM = 200;
 
-	estimatedReadTime = Math.round(words/WPM);
+			var words = articleText.split(' ').length;
 
-	console.log("Estimated Read Time: " + estimatedReadTime + " Minutes");
+			estimatedReadTime = Math.round(words/WPM);
 
-	switch(host) {
-	case "www.newyorker.com":
-		console.log('The New Yorker');
-		article.prepend("<span>HAHA</span>")
-		break;
-	case "www.economist.com":
-		console.log('The Economist');
-		break;
-	case "www.theatlantic.com":
-		console.log('The Atlantic');
-		break;
-	case "www.washingtonpost.com":
-		console.log('The Washington Post');
-		break;
-	}
-}
+			console.log("Estimated Read Time: " + estimatedReadTime + " Minutes");
+
+			switch(host) {
+			case "www.newyorker.com":
+				console.log('The New Yorker');
+				article.find('header').prepend("<span>Estimated Read Time: " + estimatedReadTime + " Minutes</span>")
+				break;
+			case "www.economist.com":
+				console.log('The Economist');
+				break;
+			case "www.theatlantic.com":
+				console.log('The Atlantic');
+				break;
+			case "www.washingtonpost.com":
+				console.log('The Washington Post');
+				break;
+			}
+		}
+	}, 1000)
+	
+})
+
