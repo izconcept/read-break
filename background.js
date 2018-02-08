@@ -21,7 +21,7 @@ $(document).ready(function() {
 			switch(host) {
 			case "www.newyorker.com":
 				console.log('The New Yorker');
-				article.find('header').prepend("<span>Estimated Read Time: " + estimatedReadTime + " Minutes</span>")
+				article.prepend("<span>Estimated Read Time: " + estimatedReadTime + " Minutes</span>")
 				break;
 			case "www.economist.com":
 				console.log('The Economist');
