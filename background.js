@@ -1,7 +1,7 @@
 // Inject javascript code into page here
 
 $(document).ready(function() {
-
+	console.log('Loaded')
 	setTimeout(function() {
 		if($('article')) {
 			article = $('article');
@@ -16,7 +16,6 @@ $(document).ready(function() {
 
 			estimatedReadTime = Math.round(words/WPM);
 
-			console.log("Estimated Read Time: " + estimatedReadTime + " Minutes");
 
 			switch(host) {
 			case "www.newyorker.com":
@@ -25,16 +24,21 @@ $(document).ready(function() {
 				break;
 			case "www.economist.com":
 				console.log('The Economist');
+				article.prepend("<span>Estimated Read Time: " + estimatedReadTime + " Minutes</span>")
 				break;
 			case "www.theatlantic.com":
 				console.log('The Atlantic');
+				article.prepend("<span>Estimated Read Time: " + estimatedReadTime + " Minutes</span>")
 				break;
 			case "www.washingtonpost.com":
 				console.log('The Washington Post');
+				article.prepend("<span>Estimated Read Time: " + estimatedReadTime + " Minutes</span>")
 				break;
 			}
+
+			console.log("Estimated Read Time: " + estimatedReadTime + " Minutes");
 		}
-	}, 1000)
+	}, 800)
 	
 })
 
