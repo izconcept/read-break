@@ -6,4 +6,8 @@ Inspired by Medium's 'time to read' feature, I wrote a plugin that estimates the
 
 ## Currently supported sites
 
-* None
+* The New Yorker
+* The Atlantic
+* The Economist
+* The Washington Post
+* The New York Times
