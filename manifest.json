@@ -17,7 +17,7 @@
     "page": "background.html"
   },
   "content_scripts": [ {
-    "matches": ["https://www.newyorker.com/*"],
+    "matches": ["https://www.newyorker.com/*", "https://www.theatlantic.com/*", "https://www.economist.com/*", "https://www.washingtonpost.com/*"],
     "js": ["jquery.js", "background.js"]
   } ]
 }
