@@ -34,6 +34,10 @@ $(document).ready(function() {
 				console.log('The Washington Post');
 				article.prepend("<span class='readTime'>Estimated Read Time: " + estimatedReadTime + " Minutes</span>")
 				break;
+			case "www.nytimes.com":
+				console.log('The New York Times');
+				article.find('header').prepend("<span class='readTime'>Estimated Read Time: " + estimatedReadTime + " Minutes</span>")
+				break;
 			}
 
 		}
