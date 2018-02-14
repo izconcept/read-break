@@ -1,4 +1,7 @@
-// Inject popup html JavaScript code
-
-
-chrome.extension.getBackgroundPage().console.log('popup');
+function updateTextInput(val) {
+    console.log(1)
+    document.getElementById('wpmValue').value=val; 
+}
+$(document).ready(function() {
+    console.log(1)
+})

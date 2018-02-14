@@ -1,5 +1,3 @@
-// Inject javascript code into page here
-
 $(document).ready(function() {
 	console.log('Loaded')
 	var host = window.location.hostname;
@@ -39,7 +37,7 @@ $(document).ready(function() {
 
 		}
 		else if(host == "www.economist.com" && $('.blog-post')) {
-			console.log(3)
+
 			var article = $('.blog-post');
 
 			var articleText = article.text();
